@@ -1,0 +1,20 @@
+language: python
+python:
+- '3.8'
+- '3.9'
+install:
+- pip install -r requirements.txt
+script:
+# - pytest
+- echo "skipping tests"
+deploy:
+  provider: heroku
+  api_key:
+    secure: RlKxSViOQZ5gmRsXHHhA4tnDirAAzu+qDMZjldGJWgPwZRTkZaLpEbaCEn3JEM5ct6InFpC22S5ItbRQFrx78J4XGUA8dHcxqOUfdBWYhTv4l2QpQAMc2Ava5+esFkD58Y7dzBln8UkbmYe95Ggs4ovMcz0FBUBoEfqIouc9ME0/dAohDlDaJl1RJn1IFpry3//zMIpLMRT0fJlz7C8fmvpUUbhWbjFQlP1xsB2e/gb1db8EVeItCyNKsycLumj/BQNA9SPGwL0POykhih6Eh3JW/pOzxdzhJeDA2HfVbXMG3tmVGxyc5b/ci73r0xBKJOwCzEMXudhN2spdeH9q8Bf8tymm2AYoVhQwGPGSDw3b+bXCsheXcZwGsdgb0c/kNHIMTaTxgb3q4aB0nkdoBTSBBmzAKoNoe9Aq8Dag34tvrM/7COycNjXFvd0XNgSBJqUunHknq+vdPuFPF3qwO/CnGw5P+nUAgFxAh5eH2yff2zMODy8hjmc7a5zJtxCaFurV23Up85/7qW8kNDe+8FnfLcUmGwf2glQfvN0lcL384aP8xthP+L43ytQXex+2Hwvt2dx7DqLZ0LHzZGCqvVHFa2BxbXnhDPv8aHQE7qEEY6KpABJf5D6cbKLVCt1QYYpnZOsNm3R1sKmyoSUTMz4cYfYPmALGs3Ep2ihpBYU=
+  app: gardeen-location-microservice
+  on:
+    repo: garden-share-08/location-microservice
+    branch: main
+  skip_cleanup: 'true'
+  run:
+    - pip install -r requirement.txt
