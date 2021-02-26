@@ -1,4 +1,5 @@
-from flask_restful import abort
+from flask import Flask
+# from flask_restful import abort
 from api.services.zip_codes_service import ZipCodesService
 
 class ZipCodes:
@@ -12,6 +13,10 @@ class ZipCodes:
 
     def get(self, zipcode, radius):
         self._abort_if_invalid(zipcode, radius)
-        #here is where we ended --> Pick up from here
-        get_zip_codes
+        response = get_zip_codes(zipcode, radius)
         return {"response": response.text}, 200
+
+api.add_resource(ZipCodes, "/zipcodes/<int:zipcode>/<float:radius>")
+
+if __name__ == "__main__":
+    app.run(debug=True)
