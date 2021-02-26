@@ -2,7 +2,7 @@
 # from flask_restful import Api
 from flask import Flask, jsonify
 # from api.resources.format import ZipCode
-from api.services.zip_codes_service import ZipCodesService
+from api.services.zip_code_service import ZipCodeService
 
 def location_microservice():
     app = Flask(__name__)
