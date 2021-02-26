@@ -1,10 +1,10 @@
 import os
+import requests
 # from <externalApi> import <endpoint we want>
 
 class ZipCodesService:
     @classmethod
-    def get_zip_codes(self, zip_code):
-        self._abort_if_invalid(zipcode, radius)
+    def get_zip_codes(self, zipcode, radius):
         response = requests.get(f'https://www.zipcodeapi.com/rest/{key}/radius.json/{zipcode}/{radius}/miles?minimal')
         return {"response": response.text}, 200
 
