@@ -2,12 +2,15 @@ import os
 import requests
 # from <externalApi> import <endpoint we want>
 
-class ZipCodesService:
+class ZipCodeService:
     @classmethod
     def get_zip_codes(self, zipcode, radius):
+        # We need to load the API_KEY here
         response = requests.get(f'https://www.zipcodeapi.com/rest/{key}/radius.json/{zipcode}/{radius}/miles?minimal')
         return {"response": response.text}, 200
 
+        # We shouldn't need anything below here 
+        
         # service = ToneAnalyzerV3(
         #     version='2017-09-21',
         #     authenticator=authenticator)

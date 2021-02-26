@@ -1,6 +1,6 @@
-from api import location-microservice
+from api import location_microservice
 
-app = location-microservice()
+app = location_microservice()
 
 if __name__ == "__main__":
     app.run()
