@@ -10,5 +10,6 @@ class ZipCodeServiceTest(unittest.TestCase):
     result = response['zip_codes']
     self.assertEqual(expected_zip_codes, result)
 
+
 if __name__ == '__main__':
   unittest.main()
