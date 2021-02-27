@@ -27,7 +27,7 @@ All repositories in the Garden-Share project can be found [here](https://github.
 
 ## Run Tests 
 1. Run `pytest` in terminal 
-1. Keep in mind, that this api key has a rate limit of 50 requests/hour (for the first 2 weeks) and 10 requests/hour after that.
+1. Keep in mind, that your api key has a rate limit of 50 requests/hour (for the first 2 weeks) and 10 requests/hour after that.
 
 
 ## The Python Equivalent to Pry 
