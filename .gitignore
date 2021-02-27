@@ -1,3 +1,6 @@
 venv
 coverge*
 .coverage
+.env
+.pytest_cache
+__pycache__
